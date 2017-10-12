@@ -5,7 +5,7 @@ using System.Security.Policy;
 namespace Idź_na_ryby_
 {
     class Deck
-    {           // KAKAKAKAKAKAK
+    {           // Wez to usun lol
         private List<Card> cards;
         private Random random = new Random();
 
