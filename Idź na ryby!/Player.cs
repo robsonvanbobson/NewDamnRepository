@@ -67,6 +67,12 @@ namespace Idź_na_ryby_
 
         public void AskForACard(List<Player> players, int myIndex, Deck stock, Values value)
         {
+            textBoxOnForm.Text = Name + " pyta, czy ktoś ma " + Card.Plural(value, 1);
+            int cardsBefore = cards.Count;
+            foreach (Player player in players)
+                player.DoYouHaveAny(value);
+            int difference = cards.Count - cardsBefore;
+            if(difference == 0)
 
             // Zażądaj określonej wartości od innych graczy. Na początku dodaj do pola tekstowego wiersz o postaci: "Janek pyta, czy ktoś ma damę".
             // Następnie przejdź przez listę graczy przekazanych do metody w postaci parametrów i spytaj każdego z nich, czy ma daną wartość, przy użyciu medoty DoYouHaveAny().
